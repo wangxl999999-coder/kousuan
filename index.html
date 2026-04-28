@@ -16,17 +16,17 @@
             </header>
             <main class="main-content">
                 <div class="feature-cards">
-                    <div class="card" onclick="startQuickPractice()">
+                    <div class="card" onclick="app.startQuickPractice()">
                         <div class="card-icon">⚡</div>
                         <h2 class="card-title">快速练习</h2>
                         <p class="card-desc">随机生成10道题，快速测试</p>
                     </div>
-                    <div class="card" onclick="showExamSettings()">
+                    <div class="card" onclick="app.showExamSettings()">
                         <div class="card-icon">📝</div>
                         <h2 class="card-title">生成试卷</h2>
                         <p class="card-desc">自定义难度和题型，生成完整试卷</p>
                     </div>
-                    <div class="card" onclick="showHistory()">
+                    <div class="card" onclick="app.showHistory()">
                         <div class="card-icon">📊</div>
                         <h2 class="card-title">练习记录</h2>
                         <p class="card-desc">查看历史练习成绩</p>
@@ -41,7 +41,7 @@
         <!-- 试卷设置页面 -->
         <div id="exam-settings-page" class="page">
             <header class="header">
-                <button class="back-btn" onclick="goHome()">← 返回</button>
+                <button class="back-btn" onclick="app.goHome()">← 返回</button>
                 <h1 class="title">试卷设置</h1>
             </header>
             <main class="main-content">
@@ -101,7 +101,7 @@
                             </label>
                         </div>
                     </div>
-                    <button class="btn btn-primary btn-large" onclick="generateExam()">
+                    <button class="btn btn-primary btn-large" onclick="app.generateExam()">
                         🚀 生成试卷
                     </button>
                 </div>
@@ -111,7 +111,7 @@
         <!-- 答题页面 -->
         <div id="quiz-page" class="page">
             <header class="header quiz-header">
-                <button class="back-btn" onclick="confirmExit()">← 退出</button>
+                <button class="back-btn" onclick="app.confirmExit()">← 退出</button>
                 <div class="progress-info">
                     <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
                 </div>
@@ -128,13 +128,13 @@
                 </div>
             </main>
             <footer class="quiz-footer">
-                <button id="prevBtn" class="btn btn-secondary" onclick="prevQuestion()" disabled>
+                <button id="prevBtn" class="btn btn-secondary" onclick="app.prevQuestion()" disabled>
                     ◀ 上一题
                 </button>
-                <button id="nextBtn" class="btn btn-primary" onclick="nextQuestion()">
+                <button id="nextBtn" class="btn btn-primary" onclick="app.nextQuestion()">
                     下一题 ▶
                 </button>
-                <button id="submitBtn" class="btn btn-success" onclick="submitQuiz()" style="display: none;">
+                <button id="submitBtn" class="btn btn-success" onclick="app.submitQuiz()" style="display: none;">
                     📤 提交试卷
                 </button>
             </footer>
@@ -143,7 +143,7 @@
         <!-- 结果页面 -->
         <div id="result-page" class="page">
             <header class="header">
-                <button class="back-btn" onclick="goHome()">← 返回首页</button>
+                <button class="back-btn" onclick="app.goHome()">← 返回首页</button>
                 <h1 class="title">练习结果</h1>
             </header>
             <main class="result-content">
@@ -175,10 +175,10 @@
                     </div>
                 </div>
                 <div class="result-actions">
-                    <button class="btn btn-primary btn-large" onclick="retryQuiz()">
+                    <button class="btn btn-primary btn-large" onclick="app.retryQuiz()">
                         🔄 再练一次
                     </button>
-                    <button class="btn btn-secondary btn-large" onclick="reviewWrongAnswers()">
+                    <button class="btn btn-secondary btn-large" onclick="app.reviewWrongAnswers()">
                         📖 查看错题
                     </button>
                 </div>
@@ -188,7 +188,7 @@
         <!-- 历史记录页面 -->
         <div id="history-page" class="page">
             <header class="header">
-                <button class="back-btn" onclick="goHome()">← 返回</button>
+                <button class="back-btn" onclick="app.goHome()">← 返回</button>
                 <h1 class="title">练习记录</h1>
             </header>
             <main class="history-content">
